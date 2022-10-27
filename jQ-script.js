@@ -148,9 +148,29 @@ $(document).ready(function(){
 
     })
 
+    const data=["Sample List","Task 1","Task 2","Task 3","Task 4","Task 5"]
+
+    var i=2
+    
     $("#addTask").click(function(){
 
-      $("#nestTask").append('<input type="text" class="form-control-plaintext form-control-sm mt-1" placeholder="Your next-task" style="color: white;">')
+      $("#nextTask").append('<input type="text" class="form-control-plaintext form-control-sm mt-1" placeholder="Your next-task" style="color: white;">')
+
+      $("input").focus(function(){
+
+        $(this).val(data[i])
+
+        i++
+        
+      })
+      
+    })
+    
+    $("#newListBtn").click(function(){
+
+      $("#title").val(data[0])
+
+      $("#task1").val(data[1])
 
     })
 
